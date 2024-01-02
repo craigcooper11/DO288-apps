@@ -15,6 +15,7 @@ con.connect(function(err) {
 
 app.get('/', function (req, res) {
   res.send('Hello World!\n');
+  res.send(con.state)
 });
 
 app.listen(8080, function () {
