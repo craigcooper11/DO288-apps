@@ -1,8 +1,8 @@
 <?php
 echo "Hello, World! PHP version is!" . PHP_VERSION . "\n";
-$servername = $_ENV["HOST"];
-$username = $_ENV["USER"];
-$password = $_ENV["PASS"];
+$servername = getenv("HOST");
+$username = getenv("USER");
+$password = getenv("PASS");
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
