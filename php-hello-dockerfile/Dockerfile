@@ -1,4 +1,5 @@
-FROM registry.access.redhat.com/ubi8/ubi
+FROM php:latest
+RUN docker-php-ext-install mysqli
 
 RUN yum --disableplugin=subscription-manager -y module enable php:7.2 \
   && yum --disableplugin=subscription-manager -y install httpd php \
